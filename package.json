@@ -22,7 +22,7 @@
     "name": "Vasco Asturiano",
     "url": "https://bl.ocks.org/vasturiano"
   },
-  "main": "build/d3-force-surface.js",
+  "main": "dist/d3-force-surface.js",
   "module": "src/index",
   "jsnext:main": "src/index",
   "repository": {
@@ -30,15 +30,16 @@
     "url": "https://github.com/vasturiano/d3-force-surface.git"
   },
   "scripts": {
-    "build": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3ForceSurface -o build/d3-force-surface.js -- src/index.js",
+    "build": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -n d3ForceSurface -o dist/d3-force-surface.js -- src/index.js",
+    "watch": "rollup -w -f umd -n d3ForceSurface -o dist/d3-force-surface.js -- src/index.js",
+    "minify": "uglifyjs dist/d3-force-surface.js -o dist/d3-force-surface.min.js -c -m --preamble \"$(preamble)\"",
     "prepublish": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "3",
-    "package-preamble": "0.0",
-    "rollup": "0.41",
-    "tape": "4",
-    "uglify-js": "^2.8.11"
+    "package-preamble": "~0.0.2",
+    "rollup": "~0.41.6",
+    "rollup-watch": "^3.2",
+    "uglify-js": "^2.8"
   }
 }
