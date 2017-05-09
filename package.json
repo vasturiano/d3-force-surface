@@ -23,14 +23,14 @@
     "url": "https://bl.ocks.org/vasturiano"
   },
   "main": "build/d3-force-surface.js",
-  "module": "index",
-  "jsnext:main": "index",
+  "module": "src/index",
+  "jsnext:main": "src/index",
   "repository": {
     "type": "git",
     "url": "https://github.com/vasturiano/d3-force-surface.git"
   },
   "scripts": {
-    "build": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3ForceSurface -o build/d3-force-surface.js -- index.js",
+    "build": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3ForceSurface -o build/d3-force-surface.js -- src/index.js",
     "prepublish": "npm run build"
   },
   "dependencies": {},
