@@ -1,0 +1,46 @@
+{
+  "name": "d3-force-surface",
+  "version": "0.0.0",
+  "description": "A multi-surface elastic collision force type for the d3-force simulation engine.",
+  "keywords": [
+    "d3",
+    "d3-module",
+    "d3-force",
+    "surface",
+    "bounce",
+    "impact",
+    "collision",
+    "physics",
+    "layout",
+    "graph",
+    "force",
+    "simulation"
+  ],
+  "homepage": "https://github.com/vasturiano/d3-force-surface",
+  "license": "MIT",
+  "author": {
+    "name": "Vasco Asturiano",
+    "url": "https://bl.ocks.org/vasturiano"
+  },
+  "main": "build/d3-force-surface.js",
+  "module": "index",
+  "jsnext:main": "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasturiano/d3-force-surface.git"
+  },
+  "scripts": {
+    "build": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3 -o build/d3-force-surface.js -- index.js",
+    "pretest": "npm run build",
+    "test": "tape 'test/**/*-test.js' && eslint index.js src",
+    "prepublish": "npm run test && npm run bundle && uglifyjs --preamble \"$(preamble)\" build/d3-force-surface.js -c -m -o build/d3-force-surface.min.js && uglifyjs --preamble \"$(preamble)\" build/d3-force-surface.bundle.js -c -m -o build/d3-force-surface.bundle.min.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "3",
+    "package-preamble": "0.0",
+    "rollup": "0.41",
+    "tape": "4",
+    "uglify-js": "^2.8.11"
+  }
+}
