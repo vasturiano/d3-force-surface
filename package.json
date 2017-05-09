@@ -30,7 +30,7 @@
     "url": "https://github.com/vasturiano/d3-force-surface.git"
   },
   "scripts": {
-    "build": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3 -o build/d3-force-surface.js -- index.js",
+    "build": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3ForceSurface -o build/d3-force-surface.js -- index.js",
     "pretest": "npm run build",
     "test": "tape 'test/**/*-test.js' && eslint index.js src",
     "prepublish": "npm run test && npm run bundle && uglifyjs --preamble \"$(preamble)\" build/d3-force-surface.js -c -m -o build/d3-force-surface.min.js && uglifyjs --preamble \"$(preamble)\" build/d3-force-surface.bundle.js -c -m -o build/d3-force-surface.bundle.min.js"
