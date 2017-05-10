@@ -40,6 +40,6 @@
     "package-preamble": "~0.0.2",
     "rollup": "~0.41.6",
     "rollup-watch": "^3.2",
-    "uglify-js-es6": "^2.8"
+    "uglify-js-es6": "^2.8.9"
   }
 }
