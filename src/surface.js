@@ -5,8 +5,8 @@ export default function() {
         surfaces = [],
         elasticity = 1,                         // 0 <= number <= 1
         radius = (node => 1),                   // accessor: number > 0
-        from = (surface => !!surface.from),     // accessor: { x, y }
-        to = (surface => !!surface.to),         // accessor: { x, y }
+        from = (surface => surface.from),       // accessor: { x, y }
+        to = (surface => surface.to),           // accessor: { x, y }
         oneWay = (surface => !!surface.oneWay), // accessor: boolean
         onImpact;                               // (node, surface) callback
 
@@ -128,11 +128,11 @@ export default function() {
     };
 
     force.from = function(_) {
-        return arguments.length ? (from = typeof _ === "function" ? _ : constant(_), force) : from;
+        return arguments.length ? (from = _, force) : from;
     };
 
     force.to = function(_) {
-        return arguments.length ? (to = typeof _ === "function" ? _ : constant(_), force) : to;
+        return arguments.length ? (to = _, force) : to;
     };
 
     force.oneWay = function(_) {
