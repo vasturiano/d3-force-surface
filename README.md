@@ -1,4 +1,4 @@
-# d3-forceSurface
+# d3.forceSurface
 
 [![NPM](https://nodei.co/npm/d3-force-surface.png?compact=true)](https://nodei.co/npm/d3-force-surface/)
 
@@ -11,7 +11,7 @@ import d3ForceSurface from '3d-force-surface';
 ```
 or
 ```
-var d3ForceSurface = require('3d-force-surface');
+d3.forceSurface = require('3d-force-surface');
 ```
 or even
 ```
@@ -21,8 +21,8 @@ then
 ```
 d3.forceSimulation()
     .nodes(<myNodes>)
-    .force('surface', d3ForceSurface()
-        .surfaces(<mySurfaces>)   
+    .force('surface', d3.forceSurface()
+        .surfaces(<mySurfaces>)
     );
 ```
 

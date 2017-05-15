@@ -1,1 +1,1 @@
-export {default} from './surface';
+export { default as forceSurface } from './surface';

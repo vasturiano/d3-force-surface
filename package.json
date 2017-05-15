@@ -30,8 +30,8 @@
     "url": "https://github.com/vasturiano/d3-force-surface.git"
   },
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -n d3ForceSurface -o dist/d3-force-surface.js -- src/index.js",
-    "watch": "rollup -w -f umd -n d3ForceSurface -o dist/d3-force-surface.js -- src/index.js",
+    "build": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -n d3 -o dist/d3-force-surface.js -- src/index.js",
+    "watch": "rollup -w -f umd -n d3 -o dist/d3-force-surface.js -- src/index.js",
     "minify": "uglifyjs dist/d3-force-surface.js -o dist/d3-force-surface.min.js -c -m --preamble \"$(preamble)\"",
     "prepublish": "npm run build && npm run minify"
   },
