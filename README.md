@@ -4,6 +4,8 @@
 
 A multi-surface elastic collision force type for the d3-force simulation engine.
 
+It can be used, for example to [keep nodes inside a container](https://bl.ocks.org/vasturiano/2992bcb530bc2d64519c5b25201492fd) or in a [game of Pong](https://bl.ocks.org/vasturiano/94107e18d438942f92b217809eb3e7ba).
+
 ## Quick start
 
 ```
