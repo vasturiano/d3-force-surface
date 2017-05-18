@@ -63,12 +63,13 @@ export default function() {
         //
 
         function intersect(la, lb) {
-            // overlap in both dimensions
-            return overlap([la.from.x, la.to.x], [lb.from.x, lb.to.x]) &&
-                overlap([la.from.y, la.to.y], [lb.from.y, lb.to.y]);
+            return (turn(la.from, lb.from, lb.to) != turn(la.to, lb.from, lb.to))
+                && (turn(la.from, la.to, lb.from) != turn(la.from, la.to, lb.to));
 
-            function overlap(sega, segb) {
-                return Math.max(...sega) >= Math.min(...segb) && Math.max(...segb) >= Math.min(...sega);
+            function turn(p1, p2, p3) {
+                const a = (p3.y - p1.y) * (p2.x - p1.x),
+                    b = (p2.y - p1.y) * (p3.x - p1.x);
+                return (a > b + Number.EPSILON) ? 1 : (a + Number.EPSILON < b) ? -1 : 0;
             }
         }
 
