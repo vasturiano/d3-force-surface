@@ -11,15 +11,15 @@ See also [d3.forceBounce](https://github.com/vasturiano/d3-force-bounce).
 ## Quick start
 
 ```
-import d3ForceSurface from '3d-force-surface';
+import d3ForceSurface from 'd3-force-surface';
 ```
 or
 ```
-d3.forceSurface = require('3d-force-surface');
+d3.forceSurface = require('d3-force-surface');
 ```
 or even
 ```
-<script src="//unpkg.com/3d-force-surface/dist/3d-force-surface.min.js"></script>
+<script src="//unpkg.com/d3-force-surface/dist/d3-force-surface.min.js"></script>
 ```
 then
 ```
