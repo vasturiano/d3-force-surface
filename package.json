@@ -30,16 +30,21 @@
     "url": "https://github.com/vasturiano/d3-force-surface.git"
   },
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -n d3 -o dist/d3-force-surface.js -- src/index.js",
-    "watch": "rollup -w -f umd -n d3 -o dist/d3-force-surface.js -- src/index.js",
+    "build": "rm -rf dist && mkdir dist && rollup -c --banner \"$(preamble)\" -f umd -n d3 -o dist/d3-force-surface.js -- src/index.js",
+    "watch": "rollup -c -w -f umd -n d3 -o dist/d3-force-surface.js -- src/index.js",
     "minify": "uglifyjs dist/d3-force-surface.js -o dist/d3-force-surface.min.js -c -m --preamble \"$(preamble)\"",
     "prepublish": "npm run build && npm run minify"
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
     "package-preamble": "~0.0.2",
     "rollup": "~0.41.6",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-node-resolve": "^3.0",
     "rollup-watch": "^3.2",
-    "uglify-js-es6": "^2.8.9"
+    "uglify-js": "^3.0.28"
   }
 }
