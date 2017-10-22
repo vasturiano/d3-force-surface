@@ -1,22 +1,22 @@
-import nodeResolve from 'rollup-plugin-node-resolve';
+import resolve from 'rollup-plugin-node-resolve';
+import commonJs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+import { name, homepage, version } from './package.json';
 
 export default {
-    entry: 'src/index.js',
-    dest: 'dist/d3-force-surface.js',
-    format: 'umd',
-    moduleName: 'd3',
+    input: 'src/index.js',
+    output: [
+        {
+            format: 'umd',
+            name: 'd3',
+            file: `dist/${name}.js`,
+            sourcemap: true
+        }
+    ],
     plugins: [
-        nodeResolve({
-            jsnext: true,
-            main: true
-        }),
-        babel({
-            presets: [
-                ["es2015", { "modules": false }]
-            ],
-            plugins: ["external-helpers"],
-            babelrc: false
-        })
-    ]
+        resolve(),
+        commonJs(),
+        babel({ exclude: 'node_modules/**' })
+    ],
+    banner: `// Version ${version} ${name} - ${homepage}`
 };
