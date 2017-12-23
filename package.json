@@ -24,8 +24,7 @@
   },
   "unpkg": "dist/d3-force-surface.min.js",
   "main": "dist/d3-force-surface.common.js",
-  "module": "src/index",
-  "jsnext:main": "src/index",
+  "module": "dist/d3-force-surface.module.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/vasturiano/d3-force-surface.git"
