@@ -1,6 +1,9 @@
-# d3.forceSurface
+d3.forceSurface
+==============
 
-[![NPM](https://nodei.co/npm/d3-force-surface.png?compact=true)](https://nodei.co/npm/d3-force-surface/)
+[![NPM package][npm-img]][npm-url]
+[![Build Size][build-size-img]][build-size-url]
+[![Dependencies][dependencies-img]][dependencies-url]
 
 A multi-surface elastic collision force type for the d3-force simulation engine.
 
@@ -41,3 +44,11 @@ d3.forceSimulation()
 | <b>to</b>([<i>fn</i>]) | Getter/setter for the surface object <b>ending point</b> accessor function `fn(surface)`. It should return a two coordinate object: `{x,y}` | `surface.to` |
 | <b>oneWay</b>([<i>bool</i> or <i>fn</i>]) | Getter/setter for the surface object "one-way" flag accessor function (`fn(surface)`) or a constant for all surfaces. This flag indicates whether collisions of nodes against the surface should occur in both directions of movement or only in one (when the node is moving in a <i>N>S</i> orientation according to the <i>W>E</i> line axis), effectively ignoring collisions in the other direction. | false |
 | <b>onImpact</b>([<i>fn</i>]) | Callback function triggered at every collision, with the signature `onImpact(node, surface)`  ||
+
+
+[npm-img]: https://img.shields.io/npm/v/d3-force-surface.svg
+[npm-url]: https://npmjs.org/package/d3-force-surface
+[build-size-img]: https://img.shields.io/bundlephobia/minzip/d3-force-surface.svg
+[build-size-url]: https://bundlephobia.com/result?p=d3-force-surface
+[dependencies-img]: https://img.shields.io/david/vasturiano/d3-force-surface.svg
+[dependencies-url]: https://david-dm.org/vasturiano/d3-force-surface
