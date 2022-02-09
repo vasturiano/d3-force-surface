@@ -3,7 +3,7 @@ d3.forceSurface
 
 [![NPM package][npm-img]][npm-url]
 [![Build Size][build-size-img]][build-size-url]
-[![Dependencies][dependencies-img]][dependencies-url]
+[![NPM Downloads][npm-downloads-img]][npm-downloads-url]
 
 A multi-surface elastic collision force type for the d3-force simulation engine.
 
@@ -13,19 +13,19 @@ See also [d3.forceBounce](https://github.com/vasturiano/d3-force-bounce).
 
 ## Quick start
 
-```
+```js
 import d3ForceSurface from 'd3-force-surface';
 ```
 or
-```
+```js
 d3.forceSurface = require('d3-force-surface');
 ```
 or even
-```
+```html
 <script src="//unpkg.com/d3-force-surface/dist/d3-force-surface.min.js"></script>
 ```
 then
-```
+```js
 d3.forceSimulation()
     .nodes(<myNodes>)
     .force('surface', d3.forceSurface()
@@ -46,9 +46,9 @@ d3.forceSimulation()
 | <b>onImpact</b>([<i>fn</i>]) | Callback function triggered at every collision, with the signature `onImpact(node, surface)`  ||
 
 
-[npm-img]: https://img.shields.io/npm/v/d3-force-surface.svg
+[npm-img]: https://img.shields.io/npm/v/d3-force-surface
 [npm-url]: https://npmjs.org/package/d3-force-surface
-[build-size-img]: https://img.shields.io/bundlephobia/minzip/d3-force-surface.svg
+[build-size-img]: https://img.shields.io/bundlephobia/minzip/d3-force-surface
 [build-size-url]: https://bundlephobia.com/result?p=d3-force-surface
-[dependencies-img]: https://img.shields.io/david/vasturiano/d3-force-surface.svg
-[dependencies-url]: https://david-dm.org/vasturiano/d3-force-surface
+[npm-downloads-img]: https://img.shields.io/npm/dt/d3-force-surface
+[npm-downloads-url]: https://www.npmtrends.com/d3-force-surface
