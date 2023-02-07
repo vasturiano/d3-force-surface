@@ -16,11 +16,7 @@ See also [d3.forceBounce](https://github.com/vasturiano/d3-force-bounce).
 ```js
 import d3ForceSurface from 'd3-force-surface';
 ```
-or
-```js
-d3.forceSurface = require('d3-force-surface');
-```
-or even
+or using a *script* tag
 ```html
 <script src="//unpkg.com/d3-force-surface/dist/d3-force-surface.min.js"></script>
 ```
