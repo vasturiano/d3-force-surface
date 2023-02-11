@@ -1,6 +1,6 @@
 {
   "name": "d3-force-surface",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A multi-surface elastic collision force type for the d3-force simulation engine.",
   "keywords": [
     "d3",
