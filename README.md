@@ -7,7 +7,7 @@ d3.forceSurface
 
 A multi-surface elastic collision force type for the d3-force simulation engine.
 
-It can be used, for example to [keep nodes within boundaries](https://bl.ocks.org/vasturiano/2992bcb530bc2d64519c5b25201492fd) or in a [game of Pong](https://bl.ocks.org/vasturiano/94107e18d438942f92b217809eb3e7ba).
+It can be used, for example to [keep nodes within boundaries](https://observablehq.com/@vasturiano/entropy) or in a [game of Pong](https://observablehq.com/@vasturiano/quad-pong).
 
 See also [d3.forceBounce](https://github.com/vasturiano/d3-force-bounce).
 
