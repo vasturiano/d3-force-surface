@@ -23,6 +23,7 @@
     "url": "https://github.com/vasturiano"
   },
   "type": "module",
+  "jsdelivr": "dist/d3-force-surface.min.js",
   "unpkg": "dist/d3-force-surface.min.js",
   "main": "dist/d3-force-surface.mjs",
   "module": "dist/d3-force-surface.mjs",

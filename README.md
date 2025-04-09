@@ -18,7 +18,7 @@ import d3ForceSurface from 'd3-force-surface';
 ```
 or using a *script* tag
 ```html
-<script src="//unpkg.com/d3-force-surface/dist/d3-force-surface.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/d3-force-surface"></script>
 ```
 then
 ```js
