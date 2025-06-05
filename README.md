@@ -41,6 +41,11 @@ d3.forceSimulation()
 | <b>oneWay</b>([<i>bool</i> or <i>fn</i>]) | Getter/setter for the surface object "one-way" flag accessor function (`fn(surface)`) or a constant for all surfaces. This flag indicates whether collisions of nodes against the surface should occur in both directions of movement or only in one (when the node is moving in a <i>N>S</i> orientation according to the <i>W>E</i> line axis), effectively ignoring collisions in the other direction. | false |
 | <b>onImpact</b>([<i>fn</i>]) | Callback function triggered at every collision, with the signature `onImpact(node, surface)`  ||
 
+## ❤️ Support This Project
+
+If you find this module useful and would like to support its development, you can [buy me a ☕](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url). Your contributions help keep open-source sustainable!
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url)
+
 
 [npm-img]: https://img.shields.io/npm/v/d3-force-surface
 [npm-url]: https://npmjs.org/package/d3-force-surface
