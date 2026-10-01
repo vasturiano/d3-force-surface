@@ -90,11 +90,13 @@ function addPaddleMouseControls(canvas) {
 			// (Re-)start simulation
 			forceSim.restart();
 
-			prevMouseCoords = [d3.event.x, d3.event.y];
+			prevMouseCoords = null;
 		})
-		.on('drag', () => {
-			const coords = [d3.event.x, d3.event.y],
-				deltas = coords.map((coord, idx) => (coord - prevMouseCoords[idx]) * MOUSE_SENSITIVITY);
+		.on('drag', ev => {
+			let coords = d3.pointer(ev);
+      if (coords.every(c => c === 0)) (coords = [ev.x, ev.y]);
+      if(!prevMouseCoords) (prevMouseCoords = coords);
+      const deltas = coords.map((coord, idx) => (coord - prevMouseCoords[idx]) * MOUSE_SENSITIVITY);
 
 			prevMouseCoords = coords;
 
