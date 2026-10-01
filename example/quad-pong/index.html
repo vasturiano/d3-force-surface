@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/en/face/8bit-wonder" type="text/css"/>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="//unpkg.com/d3@7"></script>
+  <script src="//unpkg.com/d3-force-surface"></script>
+  <script src="//unpkg.com/d3-force-bounce"></script>
+
+  <script src="paddle.js"></script>
+  <script src="ball.js"></script>
+</head>
+
+<body>
+  <div class="num-balls">
+    Balls: <span></span>
+    <button onClick="addBall()">+</button>
+    <button onClick="removeBall()">-</button>
+  </div>
+
+  <div class="score">
+    Score: <span class="large">0</span>
+  </div>
+
+  <div class="info-panel">
+    <div class="large">Ready?</div>
+    <div class="blink">click-drag to start</div>
+  </div>
+
+  <svg id="canvas"></svg>
+
+  <script src="index.js"></script>
+</body>

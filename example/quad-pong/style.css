@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: '8BITWONDERNominal';
+    font-size: 9px;
+    color: white;
+}
+
+.large {
+    font-size: 20px;
+}
+
+.blink {
+    animation: blinker 0.9s step-start infinite;
+}
+
+@keyframes blinker {
+    50% { visibility: hidden; }
+}
+
+.num-balls, .score, .info-panel {
+    position: absolute;
+    top: 20px;
+    user-select: none;
+    z-index: 1000;
+}
+
+.num-balls {
+    left: 20px;
+}
+
+.num-balls button {
+    padding: 0px 4px 2px;
+    cursor: pointer;
+}
+
+.score {
+    right: 20px;
+}
+
+.info-panel {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 300%;
+}
+
+#canvas {
+    background: black;
+    cursor: move;
+}
